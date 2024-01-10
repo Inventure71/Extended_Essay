@@ -24,7 +24,7 @@ class NNPlayer:
             self.model = load_model(self.model_file)
         else:
             print(f"Model not found for: {self.model_file}")
-        self.epsilon = 0  # Set epsilon to 0 for evaluation
+        self.epsilon = 0
 
 
     def choose_action(self, state, possible_actions):
