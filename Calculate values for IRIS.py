@@ -1,9 +1,3 @@
-'''
-Performance vs. Model Size: Plot the F1 score (or any other metric) against model size. This will give a direct visualization of how performance changes with size.
-Training Time vs. Model Size: This can show if larger models take significantly more time to train.
-Number of Epochs vs. Model Size: This can indicate if larger models converge faster or slower.
-'''
-
 #process the values for IRIS
 
 import os
@@ -134,13 +128,13 @@ def calculate_avg_excluding_outliers_and_save(df, group_columns, metric_columns,
 group_columns = ['size', 'count']
 metric_columns = ['epochs', 'f1_score', 'training_time', 'time_for_epoch', 'evaluation_time']
 
-output_folder = "models_useful_data"  # Specify the output folder name
+output_folder = "models_useful_data"
 calculate_avg_excluding_outliers_and_save(ranking_df, group_columns, metric_columns, output_folder)
 
 
 
 layer_sizes = [4, 10, 20, 50, 100, 200, 500, 1000, 2000]
-layer_counts = [2, 3, 4]  # Specify the number of layers
-number_of_trainings = 20  # Number of training instances
+layer_counts = [2, 3, 4]  
+number_of_trainings = 20
 
 #average_and_save_outliers(layer_sizes, layer_counts, number_of_trainings)
