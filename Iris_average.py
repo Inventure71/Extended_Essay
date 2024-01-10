@@ -54,7 +54,7 @@ def counting_parameters():
     results = []
 
     number_of_trainings = 1
-    train_loader, test_loader = setup_data()  # Assuming setup_data is available in this script
+    train_loader, test_loader = setup_data()  
 
     for k in range(number_of_trainings):
         for size in layer_sizes:
@@ -64,7 +64,7 @@ def counting_parameters():
                 model_path = f"models/{k}/model_{model_key}.pth"
                 file_path = f"models/stats/{k}/stats_{model_key}.pth"
 
-                if not os.path.exists(model_path):  # Check if the model exists
+                if not os.path.exists(model_path):  
                     continue
 
                 model = load_model(size, count)
@@ -99,7 +99,7 @@ def loss_over_time ():
     plt.figure(figsize=(18, 12))
 
     #set colors
-    colormap = plt.cm.tab20  # This colormap provides a good set of distinct colors
+    colormap = plt.cm.tab20  
     colors = [colormap(i % 20) for i in range(len(configurations))]
 
     #colors = [colormap(i) for i in range(len(configurations))]
