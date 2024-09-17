@@ -1,0 +1,1 @@
+This is my Extended Essay project I did for IB, the ojective was to train different sized models on different tasks and finding an optimal size to prove that increasing size does not always lead to increased performance.
